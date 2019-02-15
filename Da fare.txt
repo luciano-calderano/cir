@@ -1,6 +1,0 @@
-Fatture
-- Acconti commessa (?)
-
-Scheda preventivi (nuovo ?)
-- Descrizione, Anno, progressivo
-
