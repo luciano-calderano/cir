@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7086CC4F-1B66-43B7-8150-54CAF4E8DBA9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cir</RootNamespace>
+    <AssemblyName>Cir</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Lc\Downloads\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Cir.Exe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F666BD3C6B41D0A7101D79F70762CCA3B2CB61B2</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Cir_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App\icoHouse.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.1.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.1.6\Assemblies\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>App\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classi\ClsDbGet.cs" />
+    <Compile Include="Classi\ClsDocument.cs" />
+    <Compile Include="Classi\ClsGlobal.cs" />
+    <Compile Include="Classi\ClsDB.cs" />
+    <Compile Include="Classi\ClsPdf.cs" />
+    <Compile Include="Classi\ClsStampa.cs" />
+    <Compile Include="Clie\FrmClie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\FrmClie.Designer.cs">
+      <DependentUpon>FrmClie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\FrmCms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\FrmCms.Designer.cs">
+      <DependentUpon>FrmCms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliCmsInt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliCmsInt.Designer.cs">
+      <DependentUpon>ModalCliCmsInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliSca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliSca.Designer.cs">
+      <DependentUpon>ModalCliSca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalIntTec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalIntTec.Designer.cs">
+      <DependentUpon>ModalIntTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalSchCld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalSchCld.Designer.cs">
+      <DependentUpon>ModalSchCld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Modal\ModalGestFrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Modal\ModalGestFrn.Designer.cs">
+      <DependentUpon>ModalGestFrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\FrmScheda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\FrmScheda.Designer.cs">
+      <DependentUpon>FrmScheda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliNot.Designer.cs">
+      <DependentUpon>ModalCliNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliCms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliCms.Designer.cs">
+      <DependentUpon>ModalCliCms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliScaden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCliScaden.Designer.cs">
+      <DependentUpon>ModalCliScaden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Fatt\ModalFatRigMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Fatt\ModalFatRigMod.Designer.cs">
+      <DependentUpon>ModalFatRigMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabCms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabCms.Designer.cs">
+      <DependentUpon>SubTabCms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabFat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabFat.Designer.cs">
+      <DependentUpon>SubTabFat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabInt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabInt.Designer.cs">
+      <DependentUpon>SubTabInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabRic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabRic.Designer.cs">
+      <DependentUpon>SubTabRic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabSca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Tabs\SubTabSca.Designer.cs">
+      <DependentUpon>SubTabSca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Fatt\ModalFatCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Fatt\ModalFatCreate.Designer.cs">
+      <DependentUpon>ModalFatCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Fatt\SubFatt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Fatt\SubFatt.Designer.cs">
+      <DependentUpon>SubFatt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\ModalDbConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\ModalDbConf.Designer.cs">
+      <DependentUpon>ModalDbConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainFat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainFat.Designer.cs">
+      <DependentUpon>SubMainFat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalAmmMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalAmmMod.Designer.cs">
+      <DependentUpon>ModalAmmMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainIntDaFatt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainIntDaFatt.Designer.cs">
+      <DependentUpon>SubMainIntDaFatt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabZone.Designer.cs">
+      <DependentUpon>ModalTabZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabAlimen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabAlimen.Designer.cs">
+      <DependentUpon>ModalTabAlimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabPar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabPar.Designer.cs">
+      <DependentUpon>ModalTabPar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabScaden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabScaden.Designer.cs">
+      <DependentUpon>ModalTabScaden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalCli.Designer.cs">
+      <DependentUpon>ModalCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormAmm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormAmm.Designer.cs">
+      <DependentUpon>ModalFormAmm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormRic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormRic.Designer.cs">
+      <DependentUpon>ModalFormRic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabTec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabTec.Designer.cs">
+      <DependentUpon>ModalTabTec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Tabelle\ModalTabTip.Designer.cs">
+      <DependentUpon>ModalTabTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainFrn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainFrn.Designer.cs">
+      <DependentUpon>SubMainFrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormInterv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clie\Modal\ModalFormInterv.Designer.cs">
+      <DependentUpon>ModalFormInterv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainRic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainRic.Designer.cs">
+      <DependentUpon>SubMainRic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainAmm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainAmm.Designer.cs">
+      <DependentUpon>SubMainAmm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainCli.Designer.cs">
+      <DependentUpon>SubMainCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main\Sub\SubMainSca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Sub\SubMainSca.Designer.cs">
+      <DependentUpon>SubMainSca.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clie\FrmClie.resx">
+      <DependentUpon>FrmClie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\FrmCms.resx">
+      <DependentUpon>FrmCms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCliCmsInt.resx">
+      <DependentUpon>ModalCliCmsInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCliSca.resx">
+      <DependentUpon>ModalCliSca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalIntTec.resx">
+      <DependentUpon>ModalIntTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalSchCld.resx">
+      <DependentUpon>ModalSchCld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Modal\ModalGestFrn.resx">
+      <DependentUpon>ModalGestFrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\FrmScheda.resx">
+      <DependentUpon>FrmScheda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCliNot.resx">
+      <DependentUpon>ModalCliNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCliCms.resx">
+      <DependentUpon>ModalCliCms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCliScaden.resx">
+      <DependentUpon>ModalCliScaden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Fatt\ModalFatRigMod.resx">
+      <DependentUpon>ModalFatRigMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Tabs\SubTabCms.resx">
+      <DependentUpon>SubTabCms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Tabs\SubTabFat.resx">
+      <DependentUpon>SubTabFat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Tabs\SubTabInt.resx">
+      <DependentUpon>SubTabInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Tabs\SubTabRic.resx">
+      <DependentUpon>SubTabRic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Tabs\SubTabSca.resx">
+      <DependentUpon>SubTabSca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Fatt\ModalFatCreate.resx">
+      <DependentUpon>ModalFatCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Fatt\SubFatt.resx">
+      <DependentUpon>SubFatt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\ModalDbConf.resx">
+      <DependentUpon>ModalDbConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainFat.resx">
+      <DependentUpon>SubMainFat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalAmmMod.resx">
+      <DependentUpon>ModalAmmMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainIntDaFatt.resx">
+      <DependentUpon>SubMainIntDaFatt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabZone.resx">
+      <DependentUpon>ModalTabZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabAlimen.resx">
+      <DependentUpon>ModalTabAlimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabPar.resx">
+      <DependentUpon>ModalTabPar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabScaden.resx">
+      <DependentUpon>ModalTabScaden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalCli.resx">
+      <DependentUpon>ModalCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalFormAmm.resx">
+      <DependentUpon>ModalFormAmm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalFormRic.resx">
+      <DependentUpon>ModalFormRic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabTec.resx">
+      <DependentUpon>ModalTabTec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Tabelle\ModalTabTip.resx">
+      <DependentUpon>ModalTabTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainFrn.resx">
+      <DependentUpon>SubMainFrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clie\Modal\ModalFormInterv.resx">
+      <DependentUpon>ModalFormInterv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainRic.resx">
+      <DependentUpon>SubMainRic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainAmm.resx">
+      <DependentUpon>SubMainAmm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\Sub\SubMainCli.resx">
+      <DependentUpon>SubMainCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Main\Sub\SubMainSca.resx">
+      <DependentUpon>SubMainSca.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="App\Cir_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App\icoHouse.ico" />
+    <None Include="App\logo.jpg" />
+    <None Include="App\logo1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
